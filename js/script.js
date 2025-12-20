@@ -28,15 +28,13 @@ function runGameLoop() {
     let playNext = true;
 
     while (playNext) {
-        // Проверка: остались ли слова
+        // Есть еще слова?
         if (currentWordsDeck.length === 0) {
             alert("Слова закончились!");
             finishGame();
             return;
         }
 
-        // --- НАЧАЛО РАУНДА ---
-        // 8.1 Случайное слово
         const randIndex = Math.floor(Math.random() * currentWordsDeck.length);
         const secretWord = currentWordsDeck.splice(randIndex, 1)[0];
 
@@ -45,9 +43,7 @@ function runGameLoop() {
         let isWin = false;
         const startTime = Date.now();
 
-        // Цикл угадывания
         while (true) {
-            // Формируем маску слова (например: a**le)
             let mask = "";
             let openCount = 0;
             for (let char of secretWord) {
@@ -59,33 +55,27 @@ function runGameLoop() {
                 }
             }
 
-            // Проверка победы (все буквы открыты)
             if (openCount === secretWord.length) {
                 isWin = true;
                 break;
             }
 
-            // Запрос ввода (пункты 3.2, 3.3)
             let input = prompt(
                 `Слово: ${mask}\nБукв: ${secretWord.length}\nЖизни: ${lives}\nВведите букву или слово:`
             );
 
-            if (input === null) { // Если нажали Отмена
+            if (input === null) { // Отмена
                 finishGame(); 
                 return;
             }
 
             input = input.trim().toLowerCase();
-
-            // Валидация (пункт 3.3.4 - только латиница)
             if (!/^[a-z]+$/.test(input)) {
                 alert("Только английские буквы!");
                 continue;
             }
 
-            // Логика проверки
             if (input.length === 1) {
-                // Буква
                 if (guessedLetters.has(input)) {
                     alert("Уже была эта буква.");
                 } else if (secretWord.includes(input)) {
@@ -95,7 +85,6 @@ function runGameLoop() {
                     alert("Нет такой буквы.");
                 }
             } else {
-                // Слово
                 if (input === secretWord) {
                     isWin = true;
                     break;
@@ -105,31 +94,25 @@ function runGameLoop() {
                 }
             }
 
-            // Проверка поражения
             if (lives === 0) {
                 isWin = false;
                 break;
             }
         }
 
-        // --- КОНЕЦ РАУНДА ---
         const duration = ((Date.now() - startTime) / 1000).toFixed(1); // Время в секундах
 
-        // Сохраняем статистику
         stats.push({
             word: secretWord,
             isWin: isWin,
             time: duration
         });
 
-        // 8.1 - 8.3 Вывод промежуточного итога (алерт)
         let msg = isWin ? "Победа!" : "Поражение.";
         msg += `\nСлово: ${secretWord}`;
         msg += `\nСчет игры: Побед: ${stats.filter(s => s.isWin).length}, Поражений: ${stats.filter(s => !s.isWin).length}`;
         
         alert(msg);
-
-        // 8.4 Предложение сыграть еще
         if (!confirm("Сыграем еще раз?")) {
             playNext = false;
             finishGame();
@@ -138,7 +121,6 @@ function runGameLoop() {
 }
 
 function finishGame() {
-    // 8.4.2 Логика "Молодец"
     const wins = stats.filter(s => s.isWin).length;
     const losses = stats.length - wins;
     let finalMsg = "";
@@ -149,7 +131,6 @@ function finishGame() {
         finalMsg = "<h3>Вы всё равно молодец, но в следующий раз получится лучше!</h3>";
     }
 
-    // Генерация HTML таблицы (как ты просил)
     let tableHTML = `
         ${finalMsg}
         <p>Сложность: ${chosenDifficulty}</p>
@@ -161,7 +142,6 @@ function finishGame() {
             </tr>
     `;
 
-    // Без сортировки, просто вывод как было сыграно
     for (let item of stats) {
         tableHTML += `
             <tr>
@@ -173,15 +153,12 @@ function finishGame() {
     }
     tableHTML += "</table>";
 
-    // Вставка в DOM
     const statsContainer = document.getElementById("playerStats");
     if (statsContainer) {
         statsContainer.innerHTML = tableHTML;
     } else {
-        // Если вдруг div не найден, выведем в body
         document.body.innerHTML += tableHTML;
     }
 }
 
-// Запуск
 startGame();

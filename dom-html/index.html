@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Белый Оттиск — Визитные карточки, которые говорят за вас</title>
+  <meta name="description" content="Кастомизированные визитные карточки: односторонние, двусторонние и со смарт-чипом.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="home">
+
+  <div class="page-transition" id="pageTransition"></div>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">Белый Оттиск</a>
+      <nav class="nav" id="mainNav" aria-label="Главная навигация">
+        <a href="index.html" class="nav__link nav__link--active">Главная</a>
+        <a href="catalog.html" class="nav__link">Каталог</a>
+        <a href="about.html" class="nav__link">О компании</a>
+      </nav>
+      <div class="burger" id="burger" role="button" aria-label="Открыть меню" tabindex="0">
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="hero">
+      <div class="hero__bg-pattern" id="heroPattern" aria-hidden="true">
+        <svg viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+            <circle cx="1" cy="1" r="1" fill="#1A1A1A"/>
+          </pattern>
+          <rect width="400" height="400" fill="url(#grid)"/>
+          <line x1="0" y1="200" x2="400" y2="200" stroke="#1A1A1A" stroke-width="0.5"/>
+          <line x1="200" y1="0" x2="200" y2="400" stroke="#1A1A1A" stroke-width="0.5"/>
+        </svg>
+      </div>
+      <div class="container hero__inner">
+        <span class="hero__label reveal">Персональные визитные карточки</span>
+        <h1 class="hero__title reveal" id="heroTitle">Визитная карточка, которая говорит за вас</h1>
+        <p class="hero__desc reveal" id="heroDesc">Кратко, стильно, по делу. Мы делаем карточки, которые остаются в руке и в памяти — без лишней навязчивости, с уверенностью в материале.</p>
+        <div class="hero__actions reveal">
+          <a href="catalog.html" class="btn btn--primary">Смотреть каталог</a>
+          <a href="about.html" class="btn btn--secondary">Узнать о нас</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section__title reveal">Почему это работает</h2>
+        <p class="section__subtitle reveal">Визитка — это первое физическое впечатление о вас. Мы убрали всё лишнее, оставив только суть.</p>
+
+        <div class="features" id="features">
+          <article class="feature reveal" data-feature-index="0" tabindex="0">
+            <div class="feature__num">01</div>
+            <h3 class="feature__title">Первое впечатление</h3>
+            <p class="feature__text">Качественная карточка в руке заменяет десятки слов. Она говорит о внимании к деталям до того, как вы откроете рот.</p>
+          </article>
+          <article class="feature reveal" data-feature-index="1" tabindex="0">
+            <div class="feature__num">02</div>
+            <h3 class="feature__title">Компактный статус</h3>
+            <p class="feature__text">Карманный формат, который легко передать и сложно забыть. Минимум места — максимум информации.</p>
+          </article>
+          <article class="feature reveal" data-feature-index="2" tabindex="0">
+            <div class="feature__num">03</div>
+            <h3 class="feature__title">Лёгкий обмен</h3>
+            <p class="feature__text">Одно касание — и контакт уже в телефоне. Особенно если речь о карточках со встроенным смарт-чипом.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background-color: var(--color-muted-bg);">
+      <div class="container">
+        <div style="max-width: 720px;">
+          <h2 class="section__title reveal">Мы уверены в продукте</h2>
+          <p class="section__subtitle reveal" style="margin-bottom: 32px;">Никаких агрессивных продаж. Просто хорошая визитка, сделанная с думой о том, кому её передадут.</p>
+          <a href="catalog.html" class="btn btn--primary reveal">Выбрать визитку</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__copy">© 2026 Белый Оттиск. Все права защищены.</p>
+      <div class="footer__links">
+        <a href="mailto:hello@whitestamp.ru" class="footer__link">hello@whitestamp.ru</a>
+        <a href="about.html#contacts" class="footer__link">Контакты</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>

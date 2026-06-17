@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>О компании — Белый Оттиск</title>
+  <meta name="description" content="Белый Оттиск: история, команда и контакты компании по производству визитных карточек.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="about">
+
+  <div class="page-transition" id="pageTransition"></div>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">Белый Оттиск</a>
+      <nav class="nav" id="mainNav" aria-label="Главная навигация">
+        <a href="index.html" class="nav__link">Главная</a>
+        <a href="catalog.html" class="nav__link">Каталог</a>
+        <a href="about.html" class="nav__link nav__link--active">О компании</a>
+      </nav>
+      <div class="burger" id="burger" role="button" aria-label="Открыть меню" tabindex="0">
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" style="min-height: auto; padding: 140px 0 80px;">
+      <div class="container hero__inner">
+        <span class="hero__label reveal">О компании</span>
+        <h1 class="hero__title reveal" style="font-size: 52px;">Белый Оттиск</h1>
+        <p class="hero__desc reveal">Мы делаем визитные карточки, которые остаются в руке и в памяти.</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top: 0;">
+      <div class="container">
+        <div class="about-intro">
+          <div class="about-intro__text reveal">
+            <p>
+              Компания «Белый Оттиск» основана в 2019 году в Москве небольшой группой дизайнеров и печатников, которые верили: физическая визитка всё ещё важна. Не как реликт прошлого, а как точный, тактильный способ представиться.
+            </p>
+            <p>
+              Наша миссия проста: убрать лишнее и сделать карточку, которая говорит о вас без слов. Мы работаем с бумагой, типографикой, чипами и деталями — и уверены в каждом оттиске.
+            </p>
+            <p>
+              Сегодня мы печатаем для фрилансеров, владельцев бизнеса, творческих профессий и всех, кто ценит первое впечатление.
+            </p>
+          </div>
+
+          <div class="about-stats reveal">
+            <div class="stat magnetic" data-magnetic data-value="7">
+              <div class="stat__value" id="yearsCounter">0</div>
+              <div class="stat__label">лет на рынке</div>
+            </div>
+            <div class="stat magnetic" data-magnetic data-value="12000">
+              <div class="stat__value">12 000+</div>
+              <div class="stat__label">изготовленных карточек</div>
+            </div>
+            <div class="stat magnetic" data-magnetic data-value="340">
+              <div class="stat__value">340+</div>
+              <div class="stat__label">клиентов</div>
+            </div>
+            <div class="stat magnetic" data-magnetic data-value="3">
+              <div class="stat__value">3</div>
+              <div class="stat__label">типа продукции</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="team">
+          <h2 class="section__title reveal">Команда</h2>
+          <div class="team__grid" id="teamGrid">
+            <div class="team__member reveal">
+              <div class="team__name">Артём Волков</div>
+              <div class="team__role">Основатель и креативный директор</div>
+            </div>
+            <div class="team__member reveal">
+              <div class="team__name">Марина Соколова</div>
+              <div class="team__role">Главный дизайнер</div>
+            </div>
+            <div class="team__member reveal">
+              <div class="team__name">Дмитрий Орлов</div>
+              <div class="team__role">Руководитель печати</div>
+            </div>
+            <div class="team__member reveal">
+              <div class="team__name">Анна Кузнецова</div>
+              <div class="team__role">Работа с клиентами</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-block reveal" id="contacts">
+          <div>
+            <h3 class="contact-block__title">Контакты</h3>
+            <div class="contact-block__info">
+              <p><strong>Адрес:</strong> Москва, ул. Печатников, 12</p>
+              <p><strong>Email:</strong> hello@whitestamp.ru</p>
+              <p><strong>Телефон:</strong> +7 (495) 123-45-67</p>
+              <p><strong>Режим работы:</strong> пн–пт, 10:00–19:00</p>
+            </div>
+          </div>
+          <div>
+            <h3 class="contact-block__title">Напишите нам</h3>
+            <p class="contact-block__info">
+              Расскажите, для кого нужны визитки, и мы подберём подходящий формат. Пробел — запускает анимацию чисел на этой странице.
+            </p>
+            <a href="mailto:hello@whitestamp.ru" class="btn btn--primary">Отправить письмо</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__copy">© 2026 Белый Оттиск. Все права защищены.</p>
+      <div class="footer__links">
+        <a href="mailto:hello@whitestamp.ru" class="footer__link">hello@whitestamp.ru</a>
+        <a href="about.html#contacts" class="footer__link">Контакты</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/about.js"></script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Каталог — Белый Оттиск</title>
+  <meta name="description" content="Каталог визитных карточек: односторонние, двусторонние и со смарт-чипом.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="catalog">
+
+  <div class="page-transition" id="pageTransition"></div>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">Белый Оттиск</a>
+      <nav class="nav" id="mainNav" aria-label="Главная навигация">
+        <a href="index.html" class="nav__link">Главная</a>
+        <a href="catalog.html" class="nav__link nav__link--active">Каталог</a>
+        <a href="about.html" class="nav__link">О компании</a>
+      </nav>
+      <div class="burger" id="burger" role="button" aria-label="Открыть меню" tabindex="0">
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" style="min-height: auto; padding: 140px 0 80px;">
+      <div class="container hero__inner">
+        <span class="hero__label reveal">Каталог</span>
+        <h1 class="hero__title reveal" style="font-size: 52px;">Три варианта — для разных задач</h1>
+        <p class="hero__desc reveal">Минималистичный дизайн, качественные материалы и фокус на том, что важно.</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top: 0;">
+      <div class="container">
+        <div class="catalog-grid" id="catalogGrid">
+
+          <article class="product-card reveal" data-product="0" tabindex="0" aria-label="Односторонняя визитная карточка">
+            <span class="product-card__badge">Экономичный выбор</span>
+            <h3 class="product-card__title">Односторонняя визитка</h3>
+            <p class="product-card__desc">Классический формат: всё необходимое на одной стороне. Идеально, когда важна простота и стоимость.</p>
+            <div class="product-card__footer">
+              <span class="product-card__price">от 990 ₽ за 100 шт.</span>
+              <button class="btn btn--secondary" style="padding: 10px 20px; font-size: 13px;">Заказать</button>
+            </div>
+          </article>
+
+          <article class="product-card reveal" data-product="1" tabindex="0" aria-label="Двусторонняя визитная карточка">
+            <span class="product-card__badge">Оптимальный выбор</span>
+            <h3 class="product-card__title">Двусторонняя визитка</h3>
+            <p class="product-card__desc">Больше информации без потери лаконичности. Лицевая сторона — имя и роль, оборот — контакты и детали.</p>
+            <div class="product-card__footer">
+              <span class="product-card__price">от 1 490 ₽ за 100 шт.</span>
+              <button class="btn btn--secondary" style="padding: 10px 20px; font-size: 13px;">Заказать</button>
+            </div>
+          </article>
+
+          <article class="product-card reveal" data-product="2" tabindex="0" aria-label="Визитная карточка со смарт-чипом">
+            <span class="product-card__badge">Для продвинутых</span>
+            <h3 class="product-card__title">Визитка со смарт-чипом</h3>
+            <p class="product-card__desc">NFC-чип внутри карточки. Коснитесь телефоном — и контакт, сайт или портфолио уже сохранены.</p>
+            <div class="product-card__footer">
+              <span class="product-card__price">от 2 490 ₽ за 100 шт.</span>
+              <button class="btn btn--secondary" style="padding: 10px 20px; font-size: 13px;">Заказать</button>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="reveal" style="margin-top: 48px; text-align: center;">
+          <p class="section__subtitle" style="margin: 0 auto 24px;">Используйте стрелки ← → на клавиатуре для навигации по карточкам, Enter — чтобы выбрать.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__copy">© 2026 Белый Оттиск. Все права защищены.</p>
+      <div class="footer__links">
+        <a href="mailto:hello@whitestamp.ru" class="footer__link">hello@whitestamp.ru</a>
+        <a href="about.html#contacts" class="footer__link">Контакты</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/catalog.js"></script>
+</body>
+</html>

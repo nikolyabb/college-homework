@@ -1,0 +1,2 @@
+This is the sample data file for Part 2.
+It is used for reading, copying, piping and archiving demonstrations.

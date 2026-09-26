@@ -1,0 +1,13 @@
+{
+  "name": "upload-project",
+  "version": "1.0.0",
+  "description": "Part 2 upload project",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "multer": "^2.2.0"
+  }
+}
